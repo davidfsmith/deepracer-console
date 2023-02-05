@@ -1,0 +1,1851 @@
+{
+	"info": {
+		"_postman_id": "9f9bc777-740a-491c-99bd-218066089ddb",
+		"name": "DeepRacer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Control Vehicle",
+			"item": [
+				{
+					"name": "get mandatory update status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_mandatory_update_status",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_mandatory_update_status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/get_mandatory_update_status",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"get_mandatory_update_status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:44:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "load model",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://{{host-ip}}/models/{{model-name}}/model",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"models",
+								"{{model-name}}",
+								"model"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "is model loading",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/isModelLoading",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"isModelLoading"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "model loading",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host_ip}}/api/isModelLoading",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"isModelLoading"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:09:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isModelLoading\": \"loading\",\n    \"success\": true\n}"
+						},
+						{
+							"name": "model loaded",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host_ip}}/api/isModelLoading",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"isModelLoading"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:09:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isModelLoading\": \"loaded\",\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get sensor status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_sensor_status",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_sensor_status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "evo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host_ip}}/api/get_sensor_status",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"get_sensor_status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:13:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"camera_status\": \"not_connected\",\n    \"lidar_status\": \"connected\",\n    \"stereo_status\": \"connected\",\n    \"success\": true\n}"
+						},
+						{
+							"name": "time trial",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host_ip}}/api/get_sensor_status",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"get_sensor_status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:13:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"camera_status\": \"connected\",\n    \"lidar_status\": \"not_connected\",\n    \"stereo_status\": \"not_connected\",\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "start",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"start_stop\":\"start\"}"
+						},
+						"url": {
+							"raw": "https://{{host-ip}}/api/start_stop",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"start_stop"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "{{csrf_token}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"start_stop\":\"start\"}"
+								},
+								"url": {
+									"raw": "https://{{host-ip}}/api/start_stop",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"start_stop"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n  \"success\": true\n}\n"
+						}
+					]
+				},
+				{
+					"name": "stop",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"start_stop\":\"stop\"}"
+						},
+						"url": {
+							"raw": "https://{{host-ip}}/api/start_stop",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"start_stop"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"start_stop\":\"start\"}"
+								},
+								"url": {
+									"raw": "https://{{host_ip}}/api/start_stop",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"start_stop"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n  \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "is usb connected",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/is_usb_connected",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"is_usb_connected"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host_ip}}/api/is_usb_connected",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"is_usb_connected"
+									]
+								}
+							},
+							"status": "INTERNAL SERVER ERROR",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:22:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"is_usb_connected\": false, \n  \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get models",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/models",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"models"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host_ip}}/api/models",
+									"protocol": "https",
+									"host": [
+										"{{host_ip}}"
+									],
+									"path": [
+										"api",
+										"models"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 15:41:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1015"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"models\": [\n        {\n            \"is_select_disabled\": false,\n            \"model_action_space_type\": \"Discrete\",\n            \"model_folder_name\": \"Sample_lidar_stereo_cam\",\n            \"model_name\": \"model\",\n            \"model_sensors\": [\n                \"LiDAR\",\n                \"Stereo camera\"\n            ],\n            \"model_training_algorithm\": \"Clipped PPO\"\n        },\n        {\n            \"is_select_disabled\": false,\n            \"model_action_space_type\": \"Discrete\",\n            \"model_folder_name\": \"Sample_stereo_cam\",\n            \"model_name\": \"model\",\n            \"model_sensors\": [\n                \"Stereo camera\"\n            ],\n            \"model_training_algorithm\": \"Clipped PPO\"\n        },\n        {\n            \"is_select_disabled\": true,\n            \"model_action_space_type\": \"Discrete\",\n            \"model_folder_name\": \"Sample_single_cam\",\n            \"model_name\": \"model\",\n            \"model_sensors\": [\n                \"Camera\"\n            ],\n            \"model_training_algorithm\": \"Clipped PPO\"\n        }\n    ],\n    \"sensor_status\": {\n        \"camera_status\": \"not_connected\",\n        \"lidar_status\": \"connected\",\n        \"stereo_status\": \"connected\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "is software update available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/is_software_update_available",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"is_software_update_available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "control modes available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/control_modes_available",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"control_modes_available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "drive mode",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"drive_mode\":\"auto\"}"
+						},
+						"url": {
+							"raw": "https://{{host-ip}}/api/drive_mode?X-CSRF-TOKEN={{xsrf-token}}",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"drive_mode"
+							],
+							"query": [
+								{
+									"key": "X-CSRF-TOKEN",
+									"value": "{{xsrf-token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "max nav throttle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"throttle\":50}"
+						},
+						"url": {
+							"raw": "https://{{host-ip}}/api/max_nav_throttle?X-CSRF-TOKEN={{xsrf-token}}",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"max_nav_throttle"
+							],
+							"query": [
+								{
+									"key": "X-CSRF-TOKEN",
+									"value": "{{xsrf-token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Models",
+			"item": [
+				{
+					"name": "uploaded model list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/uploaded_model_list",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"uploaded_model_list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "uploaded model list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/uploaded_model_list",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"uploaded_model_list"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n  {\n    \"action_space_type\": \"Discrete\", \n    \"creation_time\": 1675527727.0229483, \n    \"name\": \"Sample_lidar_stereo_cam\", \n    \"sensors\": \"LiDAR, Stereo camera\", \n    \"size\": \"35M\", \n    \"status\": \"Ready\", \n    \"training_algorithm\": \"Clipped PPO\"\n  }, \n  {\n    \"action_space_type\": \"Discrete\", \n    \"creation_time\": 1674468601.0043314, \n    \"name\": \"Sample_single_cam\", \n    \"sensors\": \"Camera\", \n    \"size\": \"23M\", \n    \"status\": \"Ready\", \n    \"training_algorithm\": \"Clipped PPO\"\n  }, \n  {\n    \"action_space_type\": \"Discrete\", \n    \"creation_time\": 1675523144.6800187, \n    \"name\": \"Sample_stereo_cam\", \n    \"sensors\": \"Stereo camera\", \n    \"size\": \"34M\", \n    \"status\": \"Ready\", \n    \"training_algorithm\": \"Clipped PPO\"\n  }\n]\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Calibration",
+			"item": [
+				{
+					"name": "Steering",
+					"item": [
+						{
+							"name": "adjust calibrating wheels - angle",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "{{xsrf-token}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"pwm\":22}"
+								},
+								"url": {
+									"raw": "https://{{host-ip}}/api/adjust_calibrating_wheels/angle",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"adjust_calibrating_wheels",
+										"angle"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"success\": true\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host-ip}}/api/adjust_calibrating_wheels/angle",
+											"protocol": "https",
+											"host": [
+												"{{host-ip}}"
+											],
+											"path": [
+												"api",
+												"adjust_calibrating_wheels",
+												"angle"
+											]
+										}
+									},
+									"status": "BAD REQUEST",
+									"code": 400,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.18.0 (Ubuntu)"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Feb 2023 16:50:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "142"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>400 Bad Request</title>\n<h1>Bad Request</h1>\n<p>The CSRF token is missing.</p>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Throttle",
+					"item": [
+						{
+							"name": "adjust calibrating wheels - throttle",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "{{xsrf-token}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"pwm\":-12}"
+								},
+								"url": {
+									"raw": "https://{{host-ip}}/api/adjust_calibrating_wheels/throttle",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"adjust_calibrating_wheels",
+										"throttle"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"pwm\":-12}"
+										},
+										"url": {
+											"raw": "https://{{host-ip}}/api/adjust_calibrating_wheels/throttle",
+											"protocol": "https",
+											"host": [
+												"{{host-ip}}"
+											],
+											"path": [
+												"api",
+												"adjust_calibrating_wheels",
+												"throttle"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": "{\n  \"success\": true\n}\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "angle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_calibration/angle",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_calibration",
+								"angle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/get_calibration/angle",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"get_calibration",
+										"angle"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 16:32:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"max\": 20,\n    \"mid\": -5,\n    \"min\": -30,\n    \"polarity\": 1,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "throttle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_calibration/throttle",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_calibration",
+								"throttle"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/get_calibration/throttle",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"get_calibration",
+										"throttle"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n  \"max\": 38.0, \n  \"mid\": -12.0, \n  \"min\": -62.0, \n  \"polarity\": 1, \n  \"success\": true\n}\n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "get led color",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_led_color",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_led_color"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/get_led_color",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"get_led_color"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 17:08:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"blue\": 0,\n    \"green\": 255,\n    \"red\": 255,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "is software update available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/is_software_update_available",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"is_software_update_available"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response (no)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/is_software_update_available",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"is_software_update_available"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 17:11:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"success\": true\n}"
+						},
+						{
+							"name": "response (yes)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/is_software_update_available",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"is_software_update_available"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 17:11:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "isSshEnabled",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/isSshEnabled",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"isSshEnabled"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/isSshEnabled",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"isSshEnabled"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 17:13:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isSshEnabled\": true,\n    \"reason\": \"Ssh is enabled.\",\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "set calibration mode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/set_calibration_mode",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"set_calibration_mode"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/set_calibration_mode",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"set_calibration_mode"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 17:14:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "22"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "get device info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_device_info",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_device_info"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://{{host-ip}}/api/get_device_info",
+									"protocol": "https",
+									"host": [
+										"{{host-ip}}"
+									],
+									"path": [
+										"api",
+										"get_device_info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Feb 2023 17:17:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, OPTIONS, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"hardware_version\": \"R2.0\",\n    \"software_version\": \"2.0.383.0\",\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/logs/SYS/200",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"logs",
+								"SYS",
+								"200"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{xsrf-token}}",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "IjVkNzM3YmY2NjNmMDFiNzEwYmQ0OGMxY2UzMzk1MmU4MmE0ZmY1YzAi.Y99dFg.TQWRKaXK2dVGqkqlYKgaCFZHeAg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"{{password}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{host-ip}}/login",
+					"protocol": "https",
+					"host": [
+						"{{host-ip}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host-ip}}/logout",
+					"protocol": "https",
+					"host": [
+						"{{host-ip}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get battery level",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host-ip}}/api/get_battery_level",
+					"protocol": "https",
+					"host": [
+						"{{host-ip}}"
+					],
+					"path": [
+						"api",
+						"get_battery_level"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response (no battery)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_battery_level",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_battery_level"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Feb 2023 17:21:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, OPTIONS, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"battery_level\": -1,\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "get network details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host-ip}}/api/get_network_details",
+					"protocol": "https",
+					"host": [
+						"{{host-ip}}"
+					],
+					"path": [
+						"api",
+						"get_network_details"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{host-ip}}/api/get_network_details",
+							"protocol": "https",
+							"host": [
+								"{{host-ip}}"
+							],
+							"path": [
+								"api",
+								"get_network_details"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Feb 2023 17:21:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, OPTIONS, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"SSID\": \"Tredown\",\n    \"ip_address\": \"10.10.10.92\",\n    \"is_usb_connected\": false,\n    \"success\": true\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.collectionVariables.set(\"xsrf-token\", pm.environment.get(\"X-CSRF-TOKEN\"));"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "xsrf-token",
+			"value": ""
+		}
+	]
+}
